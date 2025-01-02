@@ -31,11 +31,11 @@
                     </li>
 
                 </ul>
-                <form class="d-flex" role="search">
+                <div class="d-flex" role="search">
                     <input class="form-control me-2" type="search" id="searchTxt" placeholder="Search"
                         aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                    <button class="btn btn-outline-success" id="searchSub" type="submit">Search</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -58,29 +58,34 @@
         </div>
     </div>
 
-    <div class="container my-3" style="min-height: 100vh;">
-        <h1 class="text-center mb-3">Welcome To Notes App</h1>
-        <div class="card border border-dark">
-            <div class="card-body">
-                <div class="mb-3">
-                    <h5 class="card-title">Add title </h5>
-                    <input type="email" class="form-control" id="addTitle" aria-describedby="title"
-                        placeholder="Enter title">
+    <div class="container my-3 mx-auto" style="min-height: 100vh;">
+        <h1 class="text-center mb-5">Welcome To Magic Notes</h1>
+        <p class="d-inline-flex gap-1">
+            <button class="btn btn-primary d-flex glowing-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                &#43; add a note
+            </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+            <div class="card border border-dark">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <h5 class="card-title">Add title </h5>
+                        <input type="email" class="form-control" id="addTitle" aria-describedby="title"
+                            placeholder="Enter title">
+                    </div>
+                    <h5 class="card-title">Add a note</h5>
+                    <div class="form-group">
+                        <textarea class="form-control my-2" id="addTxt" rows="8" Placeholder="Add a Note"></textarea>
+                    </div>
+                    <button class="btn btn-primary" id="addBtn">&#43; Add</button>
                 </div>
-                <h5 class="card-title">Add a note</h5>
-                <div class="form-group">
-                    <textarea class="form-control my-2" id="addTxt" rows="8" Placeholder="Add a Note"></textarea>
-                </div>
-                <div class="alert alert-success" id="added" role="alert"
-                    style="margin: 5px 556px; border-radius: 0%; position: fixed; display: none;">
-                    Note is Added!
-                </div>
-                <button class="btn btn-primary" id="addBtn">Add Note</button>
             </div>
         </div>
+
         <h1 class="mt-3">Your Notes</h1>
         <hr>
-        <div id="notes" class="row container-fluid">
+        <div id="notes" class="row container-fluid mx-auto" style="gap: 6px;">
         </div>
 
     </div>
